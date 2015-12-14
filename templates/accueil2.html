@@ -31,12 +31,15 @@
                 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
               </div>
           </div>
-          {# les colonnes de la page d'accueil #}
-          <div class="row">
-              <div class="col-lg-4">première colonne</div>
-              <div class="col-lg-4">deuxième colonne</div>
-              <div class="col-ld-4">troisième colonne</div>
+      </div>
+        <div class="container">
+          {# le formulaire pour un film #}
+          <div class="row1"><h3>Un film à voir</h3></div>
+          <div class="row1">
+              <div class="form-group">
+                  {{ filmform.as_p }}
+              </div>
           </div>
-
+      </div>
   </body>
 </html>

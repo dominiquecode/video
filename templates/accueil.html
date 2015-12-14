@@ -31,12 +31,23 @@
                 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
               </div>
           </div>
-          {# les colonnes de la page d'accueil #}
-          <div class="row">
-              <div class="col-lg-4">première colonne</div>
-              <div class="col-lg-4">deuxième colonne</div>
-              <div class="col-ld-4">troisième colonne</div>
+      </div>
+        <div class="container">
+          {# le formulaire pour un film #}
+          <div class="row1"><h3>Un film à voir</h3></div>
+          <div class="row1">
+              <div class="form-group">
+                  <label for="titre">Titre du film : {{ filmform.titre }}</label>
+                  <label for="realisateur">Réalisateur du film : {{ filmform.realisateur }}</label>
+                  <label for="annee">Année : {{ filmform.annee }}</label>
+                  <div class="btn btn-sm btn-primary">Voir la fiche complète ...</div>
+              </div>
+              <div class="form-group">
+                  <label for="resume">Résumé du film : {{ filmform.resume }}</label>
+                  <label for="realisateur" class=>Appréciation du film : {{ filmform.appreciation }}</label>
+                  <label for="status">Statut du film : {{ filmform.status }}</label>
+              </div>
           </div>
-
+      </div>
   </body>
 </html>
