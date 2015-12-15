@@ -5,7 +5,7 @@ from .forms import FilmForm, FilmModelForm
 # Create your views here.
 def accueil(request):
     form = FilmModelForm()
-    return render(request, 'accueil2.html', {'filmform': form})
+    return render(request, 'accueil3.html', {'filmform': form})
 
 
 
