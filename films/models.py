@@ -38,11 +38,7 @@ class Acteur(Personne):
         return self.nom + ' ' + self.prenom
 
 
-<<<<<<< Updated upstream
-class Type_film(models.Model):
-=======
 class TypeFilm(models.Model):
->>>>>>> Stashed changes
     type = models.CharField(max_length=20, unique=True)
     commentaire = models.TextField()
 
@@ -55,11 +51,7 @@ class Film(models.Model):
     realisateur = models.ForeignKey(Realisateur)
     annee = models.IntegerField()
     nom_pays = models.ForeignKey(Pays)
-<<<<<<< Updated upstream
-    type_film = models.ForeignKey(Type_film)
-=======
     type_film = models.ForeignKey(TypeFilm)
->>>>>>> Stashed changes
     acteurs = models.ManyToManyField(Acteur)
     choixStatus = [(None, 'Choisissez'),
                    ('ACHETE', 'Acheté'),
