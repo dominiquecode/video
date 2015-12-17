@@ -57,8 +57,7 @@ ROOT_URLCONF = 'video.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,6 +130,8 @@ STATICFILES_DIRS = [
 
 # le serveur d'objets static (doit être externe à l'application en mode PROD)
 # c'est à partir de ce serveur que les fichiers static seront servis au site web
-STATIC_ROOT = '/Users/dominiqueimac/github/staticserveur/video/'
+STATIC_ROOT = '/Users/dominiqueimac/github/staticserveur/video/static/'
 
 
+MEDIA_ULR = '/media/'
+MEDIA_ROOT = '/Users/dominiqueimac/github/staticserveur/video/media/'
