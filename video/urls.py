@@ -14,6 +14,8 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import url, include
 from django.contrib import admin
 from films import urls as film_urls
@@ -22,3 +24,8 @@ urlpatterns = [
     url(r'^$', include(film_urls)),
     url(r'^admin/', admin.site.urls),
 ]
+
+# ajout du serveur de static mode DEV. A ne pas utiliser en PROD
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_ULR, document_root=settings.MEDIA_ROOT)
