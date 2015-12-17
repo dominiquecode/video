@@ -131,7 +131,6 @@ STATICFILES_DIRS = [
 
 # le serveur d'objets static (doit être externe à l'application en mode PROD)
 # c'est à partir de ce serveur que les fichiers static seront servis au site web
-STATIC_ROOT = '/Users/dominiqueimac/github/staticserveur/'
-
+STATIC_ROOT = '/Users/dominiqueimac/github/staticserveur/video/'
 
 
