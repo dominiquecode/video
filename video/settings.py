@@ -121,6 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+# L'URL par défaut - doit correspondre à un répertoire static dans le projet et/ou dans chaque application du projet
 STATIC_URL = '/static/'
 
 # les différents répertoires où se trouvent les fichiers static dans l'application
@@ -129,6 +130,7 @@ STATICFILES_DIRS = [
 ]
 
 # le serveur d'objets static (doit être externe à l'application en mode PROD)
+# c'est à partir de ce serveur que les fichiers static seront servis au site web
 STATIC_ROOT = '/Users/dominiqueimac/github/staticserveur/'
 
 
