@@ -123,5 +123,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# les différents répertoires où se trouvent les fichiers static dans l'application
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+# le serveur d'objets static (doit être externe à l'application en mode PROD)
+STATIC_ROOT = '/Users/dominiqueimac/github/staticserveur/'
+
+
 
